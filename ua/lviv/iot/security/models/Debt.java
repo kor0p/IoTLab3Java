@@ -9,12 +9,21 @@ public class Debt extends Security {
     super();
   }
 
-  public Debt(final double pricePerUnit, final String currency, final RiskLevel riskLevel,
-      final Trend trend, final double duration, final String emitent,
-      final String owner, final String asset, final Security security) {
+  public Debt(final double pricePerUnit, final String currency,
+      final RiskLevel riskLevel, final Trend trend,
+      final double duration, final String emitent, final String owner,
+      final String asset, final Security security) {
     super(pricePerUnit, currency, riskLevel, trend, duration, emitent, owner);
     this.asset = asset;
     this.security = security;
+  }
+
+  public String getHeaders() {
+    return super.getHeaders() + "," + "asset" + "," + "secutity";
+  }
+
+  public String toCSV() {
+    return super.toCSV() + "     " + asset + "     " + security;
   }
 
   public String getAsset() {

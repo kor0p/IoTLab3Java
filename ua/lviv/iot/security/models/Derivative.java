@@ -8,11 +8,19 @@ public class Derivative extends Security {
     super();
   }
 
-  public Derivative(final double pricePerUnit, final String currency, final RiskLevel riskLevel,
-      final Trend trend,final double duration, final String emitent, final String owner,
-      final String asset) {
+  public Derivative(final double pricePerUnit, final String currency,
+      final RiskLevel riskLevel, final Trend trend, final double duration,
+      final String emitent, final String owner, final String asset) {
     super(pricePerUnit, currency, riskLevel, trend, duration, emitent, owner);
     this.asset = asset;
+  }
+
+  public String getHeaders() {
+    return super.getHeaders() + "," + "asset";
+  }
+
+  public String toCSV() {
+    return super.toCSV() + "     " + asset;
   }
 
   public String getAsset() {

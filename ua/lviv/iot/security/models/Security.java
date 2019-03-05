@@ -14,8 +14,9 @@ public class Security {
     super();
   }
 
-  public Security(final double pricePerUnit, final String currency, final RiskLevel riskLevel, 
-      final Trend trend, final double duration, final String emitent, final String owner) {
+  public Security(final double pricePerUnit, final String currency,
+      final RiskLevel riskLevel, final Trend trend, final double duration,
+      final String emitent, final String owner) {
     super();
     this.pricePerUnit = pricePerUnit;
     this.currency = currency;
@@ -26,11 +27,18 @@ public class Security {
     this.owner = owner;
   }
 
-  @Override
   public String toString() {
-    return "Security [pricePerUnit=" + pricePerUnit + " " + currency
-      + ", riskLevel=" + riskLevel + ", trend=" + trend + ", duration="
-      + duration + ", emitent=" + emitent + ", owner=" + owner + "]";
+    return "Security: \n[\n  " + getHeaders() + "\n  " + toCSV() + "\n]\n";
+  }
+
+  public String getHeaders() {
+    return "pricePerUnit" + "," + "currency" + "," + "riskLevel" + ","
+        + "trend" + "," + "duration" + "," + "emitent" + "," + "owner";
+  }
+
+  public String toCSV() {
+    return pricePerUnit + "     " + currency + "     " + riskLevel
+        + "     " + trend + "     " + duration + "     " + emitent + "     " + owner;
   }
 
   public double getPricePerUnit() {
