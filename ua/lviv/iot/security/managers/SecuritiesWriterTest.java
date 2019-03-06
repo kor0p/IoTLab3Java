@@ -56,21 +56,21 @@ class SecuritiesWriterTest {
       System.out.println(lines);
       Assertions.assertEquals(
           "pricePerUnit,currency,riskLevel,trend,duration,emitent,owner\n"
-          + "300.0     $     LOW     UP     0.0     Ukraine     I\n"
+          + "300.0,$,LOW,UP,0.0,Ukraine,I\n"
           + "pricePerUnit,currency,riskLevel,trend,duration,emitent,owner,"
           + "company,percentOfCompany\n"
-          + "2000.0     ₴     MEDIUM     DOWN     100.0     Russia     I     Roshen     0.5\n"
+          + "2000.0,₴,MEDIUM,DOWN,100.0,Russia,I,Roshen,0.5\n"
           + "pricePerUnit,currency,riskLevel,trend,duration,emitent,owner,asset,secutity\n"
-          + "10.0     €     HIGH     UP     3000.0     Belarus     I     null     Security: \n"
+          + "10.0,€,HIGH,UP,3000.0,Belarus,I,null,Security: \n"
           + "[\n"
           + "  pricePerUnit,currency,riskLevel,trend,duration,emitent,owner\n"
-          + "  0.0     null     null     null     0.0     null     null\n"
+          + "  0.0,null,null,null,0.0,null,null\n"
           + "]\n"
           + "\n"
           + "pricePerUnit,currency,riskLevel,trend,duration,emitent,owner,asset\n"
-          + "0.0     $     DANGER     UP     0.0     Moldova     I     house\n"
+          + "0.0,$,DANGER,UP,0.0,Moldova,I,house\n"
           + "pricePerUnit,currency,riskLevel,trend,duration,emitent,owner\n"
-          + "20.0     $     LOW     DOWN     10.0     Ukraine     I",lines);
+          + "20.0,$,LOW,DOWN,10.0,Ukraine,I",lines);
     } finally {
       System.out.println();
     }

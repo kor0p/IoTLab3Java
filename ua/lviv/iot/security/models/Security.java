@@ -37,8 +37,8 @@ public class Security {
   }
 
   public String toCSV() {
-    return pricePerUnit + "     " + currency + "     " + riskLevel
-        + "     " + trend + "     " + duration + "     " + emitent + "     " + owner;
+    return pricePerUnit + "," + currency + "," + riskLevel
+        + "," + trend + "," + duration + "," + emitent + "," + owner;
   }
 
   public double getPricePerUnit() {

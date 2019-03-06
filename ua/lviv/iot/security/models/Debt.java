@@ -23,7 +23,7 @@ public class Debt extends Security {
   }
 
   public String toCSV() {
-    return super.toCSV() + "     " + asset + "     " + security;
+    return super.toCSV() + "," + asset + "," + security;
   }
 
   public String getAsset() {

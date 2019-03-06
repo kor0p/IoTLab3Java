@@ -22,7 +22,7 @@ public class Equity extends Security {
   }
 
   public String toCSV() {
-    return super.toCSV() + "     " + company + "     " + percentOfCompany;
+    return super.toCSV() + "," + company + "," + percentOfCompany;
   }
 
   public String getCompany() {

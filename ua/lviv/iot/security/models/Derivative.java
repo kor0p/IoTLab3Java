@@ -20,7 +20,7 @@ public class Derivative extends Security {
   }
 
   public String toCSV() {
-    return super.toCSV() + "     " + asset;
+    return super.toCSV() + "," + asset;
   }
 
   public String getAsset() {
