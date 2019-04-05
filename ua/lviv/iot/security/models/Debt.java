@@ -2,34 +2,35 @@ package ua.lviv.iot.security.models;
 
 public class Debt extends Security {
 
-	private String asset;
-	private Security security;
+  private String asset;
+  private Security security;
 
-	public Debt() {
-	}
+  public Debt() {
+    super();
+  }
 
-	public Debt(double pricePerUnit, String currency, RiskLevel riskLevel,
-			Trend trend, double duration, String emitent,
-			String owner, String asset, Security security) {
-		super(pricePerUnit, currency, riskLevel, trend, duration, emitent, owner);
-		this.asset = asset;
-		this.security = security;
-	}
+  public Debt(final double pricePerUnit, final String currency, final RiskLevel riskLevel,
+      final Trend trend, final double duration, final String emitent,
+      final String owner, final String asset, final Security security) {
+    super(pricePerUnit, currency, riskLevel, trend, duration, emitent, owner);
+    this.asset = asset;
+    this.security = security;
+  }
 
-	public String getAsset() {
-		return asset;
-	}
+  public String getAsset() {
+    return asset;
+  }
 
-	public void setAsset(String asset) {
-		this.asset = asset;
-	}
+  public void setAsset(final String asset) {
+    this.asset = asset;
+  }
 
-	public Security getSecurity() {
-		return security;
-	}
+  public Security getSecurity() {
+    return security;
+  }
 
-	public void setSecurity(Security security) {
-		this.security = security;
-	}
+  public void setSecurity(final Security security) {
+    this.security = security;
+  }
 
 }
