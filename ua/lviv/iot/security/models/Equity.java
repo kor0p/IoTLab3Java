@@ -8,14 +8,23 @@ public class Equity extends Security {
   public Equity() {
   }
 
-  public Equity(final double pricePerUnit, final String currency, final RiskLevel riskLevel,
-      final Trend trend, final double duration, final String emitent, final String owner,
-      final String company, final double percentOfCompany) {
+  public Equity(final double pricePerUnit, final String currency,
+      final RiskLevel riskLevel, final Trend trend, final double duration,
+      final String emitent, final String owner, final String company,
+      final double percentOfCompany) {
     super(pricePerUnit, currency, riskLevel, trend, duration, emitent, owner);
     this.company = company;
     this.percentOfCompany = percentOfCompany;
   }
-  
+
+  public String getHeaders() {
+    return super.getHeaders() + "," + "company" + "," + "percentOfCompany";
+  }
+
+  public String toCSV() {
+    return super.toCSV() + "," + company + "," + percentOfCompany;
+  }
+
   public String getCompany() {
     return company;
   }
