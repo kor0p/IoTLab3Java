@@ -21,7 +21,7 @@ public class ApplicationDB {
   @Bean
   public CommandLineRunner demo(EquityRepository repository) {
     return (args) -> {
-      repository.save(new Equity(300, "$", RiskLevel.LOW, Trend.UP, 0, "Ukraine", "I", "GazProm", 0.5));
+      repository.save(new Equity(300, "€", RiskLevel.LOW, Trend.UP, 0, "Ukraine", "I", "GazProm", 0.5111));
       repository.save(new Equity(20, "$", RiskLevel.LOW, Trend.DOWN, 910, "Ukraine", "You", "NBU", 1));
       repository.save(new Equity(2000, "₴", RiskLevel.MEDIUM, Trend.DOWN, 100, "Russia", "I", "Roshen", 0.5));
 
